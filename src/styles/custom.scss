@@ -1,0 +1,137 @@
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap");
+
+// Default variable overrides
+
+$font-family-base: "Archivo";
+
+@import "./colors.scss";
+
+$box-shadow: 0 0.5rem 1.5rem #323030;
+
+// Required
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+//variables
+$text-color-main: #c29545;
+$text-color-secd: #cdbea7;
+
+//styles
+.bg-main {
+    background: rgb(50, 48, 48);
+    background: -moz-linear-gradient(0deg, rgba(50, 48, 48, 0.6558998599439776) 0%, rgba(205, 190, 167, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(50, 48, 48, 0.6558998599439776) 0%, rgba(205, 190, 167, 1) 100%);
+    background: linear-gradient(0deg, rgba(50, 48, 48, 0.6558998599439776) 0%, rgba(205, 190, 167, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#323030",endColorstr="#cdbea7",GradientType=1);
+}
+
+.header-label {
+    color: $text-color-main;
+    text-decoration: none;
+
+    &:hover {
+        color: $text-color-main;
+    }
+}
+
+.spotify-login {
+    text-decoration: none;
+    background-color: #1db954 !important;
+
+    &:hover {
+        background-color: #1db954bb !important;
+    }
+}
+
+.main-label-color {
+    color: $text-color-main;
+}
+
+.second-label-color {
+    color: map-get($map: $theme-colors, $key: "sec");
+}
+
+.nav-link-span {
+    color: $text-color-main;
+
+    &:hover {
+        color: $text-color-secd;
+    }
+}
+
+.releases {
+    transition: all 0.5s;
+
+    &.loading {
+        background: rgb(195, 149, 87);
+        background: -moz-linear-gradient(306deg, rgba(195, 149, 87, 1) 0%, rgba(205, 190, 167, 1) 48%);
+        background: -webkit-linear-gradient(306deg, rgba(195, 149, 87, 1) 0%, rgba(205, 190, 167, 1) 48%);
+        background: linear-gradient(306deg, rgba(195, 149, 87, 1) 0%, rgba(205, 190, 167, 1) 48%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c39557",endColorstr="#cdbea7",GradientType=1);
+        background-size: 400% 400%;
+        animation: card-gradient 5s ease infinite;
+    }
+}
+
+.song-card {
+    background-color: map-get($theme-colors, "sec") !important;
+    transition: all 0.2s;
+    cursor: pointer;
+    color: $text-color-main;
+
+    &:hover {
+        box-shadow: 0 0 15px map-get($map: $theme-colors, $key: "sec");
+    }
+    /*optional*/
+}
+/*optional for loading*/
+@keyframes card-gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main-row {
+    padding-bottom: 70px;
+}
+
+.author-link {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        color: $text-color-secd;
+    }
+}
+
+.bg-side-nav {
+    background-color: rgba($color: map-get($map: $theme-colors, $key: "sec"), $alpha: 0.5);
+    // filter: ;
+}
+
+.bar-song-label {
+    color: map-get($map: $theme-colors, $key: "sec");
+    font-weight: bold;
+}
+
+.song-strip {
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 0px 5px map-get($map: $theme-colors, $key: "sec");
+    }
+}
+
+.progress-bar {
+    background-color: map-get($map: $theme-colors, $key: "sec") !important;
+}
