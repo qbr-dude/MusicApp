@@ -13,7 +13,7 @@ $box-shadow: 0 0.5rem 1.5rem #323030;
 // Required
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/root";
+@import "~bootstrap/scss/maps";
 
 //variables
 $text-color-main: #c29545;
