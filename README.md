@@ -1,5 +1,9 @@
 # Music App
 
+```diff
+@@ ** DROPPED т.к. Spotify не работает в России)** @@
+```
+
 ## Stack
 React App with:
 * Bootstrap 5;
